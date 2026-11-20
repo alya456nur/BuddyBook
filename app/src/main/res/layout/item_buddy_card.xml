@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardBuddyContainer"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_buddy_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <FrameLayout
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_profile_small">
+
+        <ImageView
+            android:id="@+id/imgCardBuddyPhoto"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:contentDescription="Profile avatar"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile_person" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCardBuddyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Name"
+            android:textColor="#4A3A3A"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tvCardBuddyStateGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="State • Gender"
+            android:textColor="#8A7A76"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/tvCardBuddyEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="email@domain.com"
+            android:textColor="#A29490"
+            android:textSize="7sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:contentDescription="Open details"
+        android:src="@drawable/ic_chevron_right" />
+
+</LinearLayout>

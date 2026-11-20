@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imgHomeBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Home dashboard background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/bg_profile_circle"
+        android:contentDescription="Profile picture"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_profile_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Good morning,"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toTopOf="@id/imgProfile"/>
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Aina! 👋"
+        android:textColor="#FFE39B"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvGreeting"/>
+
+    <TextView
+        android:id="@+id/tvGreetingSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Let's keep your buddy list organised."
+        android:textColor="#F6D8E2"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@id/imgProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName"/>
+
+    <LinearLayout
+        android:id="@+id/statisticsContainer"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="18dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgProfile">
+
+        <LinearLayout
+            android:id="@+id/cardTotalBuddies"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_stat_card"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="24"
+                android:textColor="#4A3A3A"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Total Buddies"
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardStatesCovered"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_stat_card"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="8"
+                android:textColor="#4A3A3A"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="States Covered"
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardNewThisMonth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_stat_card"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="3"
+                android:textColor="#4A3A3A"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="New This Month"
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvQuickActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Quick Actions"
+        android:textColor="#4A3A3A"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statisticsContainer" />
+
+    <LinearLayout
+        android:id="@+id/quickActionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvQuickActions">
+
+        <LinearLayout
+            android:id="@+id/cardAddBuddy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_quick_action_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp">
+
+            <FrameLayout
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_add_circle">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Add buddy"
+                    android:src="@drawable/ic_add_white" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Add New Buddy"
+                    android:textColor="#4A3A3A"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Save a new friend's information"
+                    android:textColor="#8A7A76"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardFindBuddy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_quick_action_card"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="10dp">
+
+            <FrameLayout
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:background="@drawable/bg_find_circle">
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="Find buddy"
+                    android:src="@drawable/ic_search_white" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Find Buddy"
+                    android:textColor="#4A3A3A"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Search by name, state or gender"
+                    android:textColor="#8A7A76"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvRecentlyAdded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Recently Added"
+        android:textColor="#4A3A3A"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quickActionsContainer" />
+
+    <TextView
+        android:id="@+id/tvViewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_regular"
+        android:text="View All"
+        android:textColor="#FF6F61"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvRecentlyAdded"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="18dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationWrapper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRecentlyAdded">
+
+        <LinearLayout
+            android:id="@+id/recentlyAddedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottomNavigationWrapper"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_bottom_navigation"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Home"
+                    android:src="@drawable/ic_home_active" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Home"
+                    android:textColor="#8F1747"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navBuddies"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Buddies"
+                    android:src="@drawable/ic_buddies" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Buddies"
+                    android:textColor="#9B8D89"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="64dp"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/navReports"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Reports"
+                    android:src="@drawable/ic_reports" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Reports"
+                    android:textColor="#9B8D89"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Profile"
+                    android:src="@drawable/ic_profile_nav" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Profile"
+                    android:textColor="#9B8D89"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/navAdd"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/bg_nav_add_button"
+            android:clickable="true"
+            android:elevation="14dp"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:contentDescription="Add buddy"
+                android:src="@drawable/ic_add_white" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuddyDetailsActivity">
+
+    <ImageView
+        android:id="@+id/imgBuddyDetailsBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Buddy details background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/buddy_details_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnBackBuddyDetails"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="44dp"
+        android:clickable="true"
+        android:contentDescription="Back"
+        android:focusable="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/btnAddBuddyToGroup"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_add_group_circle"
+        android:clickable="true"
+        android:contentDescription="Add buddy to group"
+        android:focusable="true"
+        android:padding="7dp"
+        android:src="@drawable/ic_add_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/profileImageContainer"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/bg_profile_details_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgBuddyProfile"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_gravity="center"
+            android:contentDescription="Buddy profile"
+            android:src="@drawable/ic_profile_person" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvBuddyDetailsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Sarah Iman"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImageContainer" />
+
+    <TextView
+        android:id="@+id/tvBuddyDetailsState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Selangor"
+        android:textColor="#F7DDE5"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBuddyDetailsName" />
+
+    <LinearLayout
+        android:id="@+id/detailsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_details_card"
+        android:orientation="vertical"
+        android:padding="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBuddyDetailsState">
+
+
+        <LinearLayout
+            android:id="@+id/genderRow"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="Gender"
+                android:src="@drawable/ic_gender" />
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Gender"
+                android:textColor="#4A3A3A"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvBuddyGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Female"
+                android:textColor="#756969"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/genderDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0E1D8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="Email"
+                android:src="@drawable/ic_email_outline" />
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Email"
+                android:textColor="#4A3A3A"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvBuddyEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="sarahiman@email.com"
+                android:textColor="#756969"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0E1D8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="Phone"
+                android:src="@drawable/ic_phone" />
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Phone"
+                android:textColor="#4A3A3A"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvBuddyPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="011-22334455"
+                android:textColor="#756969"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0E1D8" />
+
+        <LinearLayout
+            android:id="@+id/addressRow"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="Address"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Address"
+                android:textColor="#4A3A3A"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvBuddyAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="No. 12, Jalan Saujana 4/1,\nShah Alam, Selangor."
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/addressDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F0E1D8" />
+
+        <LinearLayout
+            android:id="@+id/stateRow"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:contentDescription="State"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="State"
+                android:textColor="#4A3A3A"
+                android:textSize="9sp" />
+
+            <TextView
+                android:id="@+id/tvBuddyStateValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Selangor"
+                android:textColor="#756969"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailsButtons"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detailsCard">
+
+        <TextView
+            android:id="@+id/btnDeleteBuddy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_delete_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="#FF5F45"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/btnEditBuddy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_save_buddy_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Edit Buddy"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

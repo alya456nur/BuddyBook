@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BuddiesActivity">
+
+    <ImageView
+        android:id="@+id/imgBuddiesBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Buddies background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/buddies_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/tvMyBuddiesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="My Buddies"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBuddyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="24 buddies saved"
+        android:textColor="#F8DCE5"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMyBuddiesTitle" />
+    <ImageView
+        android:id="@+id/btnGroups"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="18dp"
+        android:src="@drawable/ic_groups"
+        android:contentDescription="My Groups"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="3dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/bg_search_field"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="13dp"
+        android:paddingEnd="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBuddyCount">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="Search"
+            android:src="@drawable/ic_search_grey" />
+
+        <EditText
+            android:id="@+id/etSearchBuddy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="9dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Search buddy by name..."
+            android:padding="0dp"
+            android:singleLine="true"
+            android:textColor="#4A3A3A"
+            android:textColorHint="#A89B9B"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/filterScroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="18dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchContainer">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chipAll"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_chip_active"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:minWidth="46dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:text="All"
+                android:textColor="#8F1747"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/chipSelangor"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/bg_chip_normal"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:minWidth="72dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:text="Selangor"
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/chipJohor"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/bg_chip_normal"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:minWidth="62dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:text="Johor"
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/chipKedah"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/bg_chip_normal"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:minWidth="62dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:text="Kedah"
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/chipMore"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/bg_chip_normal"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:paddingStart="13dp"
+                android:paddingEnd="13dp"
+                android:text="More⌄"
+                android:textColor="#756969"
+                android:textSize="8sp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/buddyListScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationWrapper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterScroll">
+
+        <LinearLayout
+            android:id="@+id/buddyListContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="90dp">
+
+            <!-- Dynamic card populated here -->
+
+        </LinearLayout>
+
+    </ScrollView>
+    <TextView
+        android:id="@+id/btnAddBuddyFloating"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_add_buddy_pill"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="+  Add Buddy"
+        android:textColor="#FFFFFF"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationWrapper"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <FrameLayout
+        android:id="@+id/bottomNavigationWrapper"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/bg_bottom_navigation"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <!-- HOME -->
+
+            <LinearLayout
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Home"
+                    android:src="@drawable/ic_home_inactive" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Home"
+                    android:textColor="#9B8D89"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+            <!-- BUDDIES - ACTIVE -->
+
+            <LinearLayout
+                android:id="@+id/navBuddies"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Buddies"
+                    android:src="@drawable/ic_buddies_active" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Buddies"
+                    android:textColor="#8F1747"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+            <!-- SPACE FOR FLOATING PLUS BUTTON -->
+
+            <Space
+                android:layout_width="64dp"
+                android:layout_height="match_parent" />
+
+            <!-- REPORTS -->
+
+            <LinearLayout
+                android:id="@+id/navReports"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Reports"
+                    android:src="@drawable/ic_reports" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Reports"
+                    android:textColor="#9B8D89"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+            <!-- PROFILE -->
+
+            <LinearLayout
+                android:id="@+id/navProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Profile"
+                    android:src="@drawable/ic_profile_nav" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Profile"
+                    android:textColor="#9B8D89"
+                    android:textSize="7sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- FLOATING PLUS BUTTON -->
+
+        <FrameLayout
+            android:id="@+id/navAdd"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/bg_nav_add_button"
+            android:clickable="true"
+            android:elevation="14dp"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:contentDescription="Add buddy"
+                android:src="@drawable/ic_add_white" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

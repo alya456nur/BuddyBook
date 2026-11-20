@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/stateJohor" android:title="Johor" />
+    <item android:id="@+id/stateKedah" android:title="Kedah" />
+    <item android:id="@+id/stateKelantan" android:title="Kelantan" />
+    <item android:id="@+id/stateMelaka" android:title="Melaka" />
+    <item android:id="@+id/stateNegeriSembilan" android:title="Negeri Sembilan" />
+    <item android:id="@+id/statePahang" android:title="Pahang" />
+    <item android:id="@+id/statePenang" android:title="Pulau Pinang" />
+    <item android:id="@+id/statePerak" android:title="Perak" />
+    <item android:id="@+id/statePerlis" android:title="Perlis" />
+    <item android:id="@+id/stateSabah" android:title="Sabah" />
+    <item android:id="@+id/stateSarawak" android:title="Sarawak" />
+    <item android:id="@+id/stateSelangor" android:title="Selangor" />
+    <item android:id="@+id/stateTerengganu" android:title="Terengganu" />
+
+    <item android:id="@+id/stateKualaLumpur" android:title="Kuala Lumpur" />
+    <item android:id="@+id/stateLabuan" android:title="Labuan" />
+    <item android:id="@+id/statePutrajaya" android:title="Putrajaya" />
+
+</menu>

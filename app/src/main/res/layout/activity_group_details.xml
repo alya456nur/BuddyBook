@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GroupDetailsActivity">
+
+    <ImageView
+        android:id="@+id/imgGroupDetailsBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="Group details background"
+        android:scaleType="centerCrop"
+        android:src="@drawable/buddies_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnBackGroupDetails"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="44dp"
+        android:clickable="true"
+        android:contentDescription="Back"
+        android:focusable="true"
+        android:padding="3dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/groupTitleContainer"
+        android:layout_width="220dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvGroupDetailsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Family"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etGroupName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_input_field"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:hint="Group name"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:singleLine="true"
+            android:textColor="#4A3A3A"
+            android:textColorHint="#A89B9B"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvGroupMemberCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="3 members"
+        android:textColor="#F7DDE5"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/groupTitleContainer" />
+
+    <ScrollView
+        android:id="@+id/groupMemberScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="18dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/groupActionButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGroupMemberCount">
+
+        <LinearLayout
+            android:id="@+id/groupMemberContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- Populate group members here -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/groupActionButtons"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/btnDeleteGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_delete_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Delete Group"
+            android:textColor="#FF5F45"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/btnEditGroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_save_buddy_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Edit Group"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
